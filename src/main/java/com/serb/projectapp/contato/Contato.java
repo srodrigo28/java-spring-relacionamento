@@ -10,8 +10,12 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
+@Getter
+@Setter
 @Entity(name="contatos")
 public class Contato {
     
@@ -26,9 +30,10 @@ public class Contato {
     private String complemento;
 
     private String email;
+
     @NotBlank(message="Telefone Não pode ser em branco")
     private String telefone;
-
+    
     @OneToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id")
     private Cliente cliente;
