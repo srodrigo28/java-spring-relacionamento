@@ -24,9 +24,14 @@ public class Transacao {
     private String tipo;
 
     @NotBlank(message="Valor não pode ser em branco")
-    private Double valor;
+    private String valor;
 
     @Temporal(TemporalType.DATE)
     private Date dataTransacao = new Date();
+
+    /***
+        @JoinColumn(name = "id_cliente", referencedColumnName = "id") 
+        private Cliente cliente;
+     */
 
 }

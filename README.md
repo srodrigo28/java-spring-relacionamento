@@ -27,5 +27,18 @@ https://www.youtube.com/watch?v=ETihMlwSAWI&list=PLWXw8Gu52TRIRJUOVMZTVtoMd-Tqso
 ##### CrudRepository 
 ##### JPARepository
 ##### PaginAndSortingRepository
+```
 https://www.youtube.com/watch?v=in-Ixdfm5CE
 ```
+
+#### Exemplo Relacionamento
+SELECT transacao.id, clientes.nome, transacao.valor
+FROM transacao
+INNER JOIN clientes
+ON transacao.id_cliente=clientes.id;
+
+SELECT transacao.id, clientes.nome, transacao.valor
+FROM transacao
+INNER JOIN clientes
+ON transacao.id_cliente=clientes.id
+WHERE id_cliente = 1;
