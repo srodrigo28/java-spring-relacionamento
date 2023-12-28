@@ -24,4 +24,10 @@ public class ClienteController {
     public Iterable<Cliente> listar(){
         return clienteRepository.findAll();
     }
+
+    @CrossOrigin("*")
+    @DeleteMapping("/{id}")
+    public void deleteClienjte(@PathVariable Long id){
+        clienteRepository.deleteById(id);
+    }
 }
